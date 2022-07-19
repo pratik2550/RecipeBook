@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     TabNavigator(tab = HomeTab) {
                         Scaffold(
                             bottomBar = {
-                                BottomNavigation(modifier = Modifier.background(colorResource(id = R.color.red_light))) {
+                                BottomNavigation(backgroundColor = colorResource(id = R.color.blue_dark)) {
                                     TabNavigatorItem(tab = HomeTab)
                                     TabNavigatorItem(tab = CategoryTab)
                                     TabNavigatorItem(tab = ProfileTab)

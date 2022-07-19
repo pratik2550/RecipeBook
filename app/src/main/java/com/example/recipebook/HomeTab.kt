@@ -169,7 +169,7 @@ fun TopSearch() {
         Text(
             text = "Best pick for you",
             fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(start = 15.dp, bottom = 8.dp),
+            modifier = Modifier.padding(start = 15.dp, bottom = 4.dp),
             textAlign = TextAlign.Start,
             style = MaterialTheme.typography.h2
         )
@@ -255,13 +255,16 @@ fun FeatureItem(
             contentScale = ContentScale.Crop,
             modifier = Modifier
                 .padding(top = 0.dp, end = 0.dp)
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .height(140.dp),
         )
         Text(
             text = list,
             fontSize = 14.sp,
             fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(4.dp), textAlign = TextAlign.Start
+            modifier = Modifier
+                .padding(4.dp)
+                .fillMaxWidth(), textAlign = TextAlign.Start
         )
     }
 }
