@@ -219,7 +219,7 @@ fun TopSearch() {
         LazyVerticalGrid(
             cells = GridCells.Fixed(2),
             contentPadding = PaddingValues(start = 7.5.dp, end = 7.5.dp, bottom = 100.dp),
-            modifier = Modifier.fillMaxHeight()
+            modifier = Modifier.fillMaxHeight().padding(0.dp)
         ) {
             items(list.size) {
                 FeatureItem(list = list[it])
@@ -235,10 +235,11 @@ fun FeatureItem(
     Column(
         modifier = Modifier
             .aspectRatio(1f)
-            .padding(8.dp)
+            .padding(top = 4.dp, bottom = 4.dp, start = 4.dp, end = 4.dp)
             .clip(RoundedCornerShape(10.dp))
+            .fillMaxSize()
             .background(colorResource(id = R.color.red_light)),
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
 //        Icon(
@@ -250,20 +251,20 @@ fun FeatureItem(
 //
 //            )
         Image(
-            painter = painterResource(id = R.drawable.paneer),
+            painter = painterResource(id = R.drawable.roll),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier
-                .padding(top = 0.dp, end = 0.dp)
+                .padding(top = 0.dp, end =0.dp)
                 .fillMaxWidth()
-                .height(140.dp),
+                .size(150.dp),
         )
         Text(
             text = list,
             fontSize = 14.sp,
             fontWeight = FontWeight.Bold,
             modifier = Modifier
-                .padding(4.dp)
+                .padding(start = 8.dp, top = 4.dp)
                 .fillMaxWidth(), textAlign = TextAlign.Start
         )
     }
